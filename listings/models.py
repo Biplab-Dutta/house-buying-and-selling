@@ -1,10 +1,10 @@
 from django.db import models
 from datetime import datetime
-from realtors.models import Realtor
+from realtors.models import Realtors
 
 
 class Listings(models.Model):
-    realtor = models.ForeignKey(Realtor, on_delete=models.DO_NOTHING)
+    realtor = models.ForeignKey(Realtors, on_delete=models.DO_NOTHING)
     title = models.CharField(max_length=255)
     address = models.CharField(max_length=255)
     city = models.CharField(max_length=255)
